@@ -167,19 +167,43 @@
 // Student.prototype.greeting = function(){
 //     console.log("Welcome"+this.name+this.fatherName);
 // }
-function car(name,model, color){
+// function car(name,model, color){
+//     this.name=name;
+//     this.model=model;
+//     this.color=color
+// }
+// var car1 =new car("OD",2000,"red")
+// var car2 =new car("xyz",333,"black")
+
+// console.log(car1.name);
+// console.log(car1.model);
+
+// console.log(car2.name);
+
+// console.log(car2.color);
+// console.log(car2.model)
+
+function Student(name,fatherName,age,marks){
     this.name=name;
-    this.model=model;
-    this.color=color
+    this.fatherName=fatherName;
+    this.age=age;
+    this.marks=marks
+    this.positin = function(){
+        // var details = this.name + this.fatherName +this.age +this.marks
+        // console.log(details);
+        console.log(`your name is ${this.name + this.fatherName}`);
+    }
 }
-var car1 =new car("OD",2000,"red")
-var car2 =new car("xyz",333,"black")
+var student1 =new Student("faiz","ismail",21,90)
+var student2 =new Student("umair","abdullah",21,90,32)
+var student3 =new Student("Talha","Ali",12,222)
 
-console.log(car1.name);
-console.log(car1.model);
+// console.log(student1.name +" "+ student1.fatherName);
+// console.log(student2.name +" "+ student2.fatherName);
+// console.log(student3.name +" " + student3.fatherName);
+student1.positin()
+student2.positin()
+student3.positin()
 
-console.log(car2.name);
 
-console.log(car2.color);
-console.log(car2.model);
 
