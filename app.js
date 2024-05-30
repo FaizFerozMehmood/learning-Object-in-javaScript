@@ -105,11 +105,81 @@
 // return calculation
 // }
 // console.log("user age =>",info.age(),info)
-var info = {
-    name :"john",
-    id:"74684246",
+// var info = {
+//     name :"john",
+//     id:"74684246",
 
+// }
+// delete info.name
+// info.naming ="faiz"
+// console.log(info);
+//  var userinfo = {
+//     name :"faiz",
+//     age:21,
+// calculation = function{
+
+// }
+//  }
+
+
+//  function Student(name, fatherName, age, attendance) {
+//     this.name = name; // object ki propert add ki this ke through
+//     this.fatherName = fatherName;
+//     this.age = age;
+//     this.attendance = attendance;
+// }
+// this.totalClasses = totalClasses;
+  
+//   Student.prototype.totalClasses = 60;
+//   Student.prototype.isStudentPunctual = function () {
+//     var userAttendance = this.attendance / this.totalClasses;
+//     if (userAttendance >= 0.9) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   };
+  
+//   var student1 = new Student("Abdullah", "Ahmed", 14, 50);
+//   var student2 = new Student("Asim", "Muneer", 20, 50);
+//   var student3 = new Student("Usman", "Qadir", 14, 55);
+//   var student4 = new Student("Ubaid", "Shahid", 20, 60);
+
+
+// function Employee(name, fatherName,age){
+// this.name = name;
+// this.fatherName=fatherName;
+// this.age=age;
+// }
+// // var student = new Employee ("FAIZ","MEHMOOD",21)
+// Employee.prototype.greet =function(){
+//     console.log("hello"+this.name);
+// }
+// var faiz = new Employee("faiz")
+// faiz.greet()
+
+// function Student (name,fatherName,age){
+//     this.namae= name;
+//     this.fatherName.fatherName;
+//     this.age=age;
+// }
+// var men = new Student ("faiz","mehmood",21)
+// Student.prototype.greeting = function(){
+//     console.log("Welcome"+this.name+this.fatherName);
+// }
+function car(name,model, color){
+    this.name=name;
+    this.model=model;
+    this.color=color
 }
-delete info.name
-info.naming ="faiz"
-console.log(info);
+var car1 =new car("OD",2000,"red")
+var car2 =new car("xyz",333,"black")
+
+console.log(car1.name);
+console.log(car1.model);
+
+console.log(car2.name);
+
+console.log(car2.color);
+console.log(car2.model);
+
