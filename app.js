@@ -183,27 +183,51 @@
 // console.log(car2.color);
 // console.log(car2.model)
 
-function Student(name,fatherName,age,marks){
-    this.name=name;
-    this.fatherName=fatherName;
-    this.age=age;
-    this.marks=marks
-    this.positin = function(){
+
+
+
+// function Student(name,fatherName,age,marks){
+//     this.name=name;
+//     this.fatherName=fatherName;
+//     this.age=age;
+//     this.marks=marks
+//     this.positin = function(){
         // var details = this.name + this.fatherName +this.age +this.marks
         // console.log(details);
-        console.log(`your name is ${this.name + this.fatherName}`);
-    }
-}
-var student1 =new Student("faiz","ismail",21,90)
-var student2 =new Student("umair","abdullah",21,90,32)
-var student3 =new Student("Talha","Ali",12,222)
+//         console.log(`your name is ${this.name + this.fatherName}`);
+//     }
+// }
+// var student1 =new Student("faiz","ismail",21,90)
+// var student2 =new Student("umair","abdullah",21,90,32)
+// var student3 =new Student("Talha","Ali",12,222)
 
 // console.log(student1.name +" "+ student1.fatherName);
 // console.log(student2.name +" "+ student2.fatherName);
 // console.log(student3.name +" " + student3.fatherName);
-student1.positin()
-student2.positin()
-student3.positin()
+// student1.positin()
+// student2.positin()
+// student3.positin()
 
 
+// function Employee(name,age){
+//     this.name = name ;
+//     this.age = age
+//     this.year = function(){
+//         console.log(`you are nice ${this.name}!`);
+//     }
 
+// }
+// var details = new Employee("faiz","21")
+// console.log(details.name);
+// console.log(details.age);
+// details.year()
+
+function Person(name,email){
+    this.name = name;
+    this.email = email
+}
+Person.prototype.greet = function(){
+    console.log("Hello!"+this.name);
+}
+var result = new Person("Faiz")
+result.greet()
