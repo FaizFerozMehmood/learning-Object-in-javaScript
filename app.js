@@ -1,3 +1,88 @@
+//       QUESTION ONE
+
+var itemsArray = [
+  { name: "juice", price: "50", quantity: "3" },
+  { name: "cookie", price: "30", quantity: "9" },
+  { name: "shirt", price: "880", quantity: "1" },
+  { name: "pen", price: "100", quantity: "2" }
+]; 
+
+var totalpricAll = 0;
+for (var i = 0; i <itemsArray.length; i ++){
+  var items = itemsArray[i]
+  var totalPriceOftwo = parseInt(items.price) * parseInt(items.quantity)
+  console.log(`Total Price of ${items.name} is ${totalPriceOftwo}`);
+  totalpricAll += totalPriceOftwo
+}
+console.log(`Total price of the products ${totalpricAll}`);
+
+var rtValue = itemsArray.map((total)=> {
+  if(total.price && total.quantity){
+    return total.price * total.quantity
+  }
+}).reduce((acc,cur)=>acc + cur ,0)
+console.log(rtValue)
+
+
+///                         QUESTION TWO ////
+// 2. Create an object with properties name, email, password, age,
+// gender, city, country.
+// Check if age and country properties exist in object or not.
+// Also check firstName and lastName properties in object.
+
+var propertiesName = {
+  name : "Faiz",
+  email :"faiz@gamil.com",
+  password : 12345,
+  age : 21,
+  gender : "male",
+  city : "karachi",
+  country : "pakistan"
+}
+if(propertiesName.age){
+  console.log("available");
+}
+console.log(propertiesName.hasOwnProperty('country'));//true
+// console.log('valueOf' in propertiesName);
+if(propertiesName.age){
+  console.log("age is exists in the object");
+
+}
+console.log(propertiesName.hasOwnProperty('age'));//output is true as it exists in the object
+
+if(propertiesName.firstName)
+  console.log("it is exists in the object");
+else{
+  console.log("Sorry, It can not be found in the object");
+}
+console.log(propertiesName.hasOwnProperty('lastName'));
+
+
+//            QUESTION THREE
+
+ //  3. Create a constructor function with some properties. Now
+// create multiple records using the constructor.
+
+function Student(name,faterName,email,matialStutus){
+  this.name = name ;
+  this.faterName = faterName;
+  this.email = email;
+  this.matialStutus = matialStutus
+}
+var student1 =new Student ("faiz","M.Ismail","faiz@gmail.com","single")
+var employee =new Student ("umair","Abdullah","umair@gmail.com","maried")
+var employee2 =new Student ("HABIB","ALI","HABIB@gmail.com","maried")
+
+
+console.log(student1.name);
+console.log(employee.name);
+console.log(employee2.name);
+
+
+
+
+
+
 // var  info ={
 //     userName : "faiz",
 //     id :12344,
@@ -222,12 +307,110 @@
 // console.log(details.age);
 // details.year()
 
-function Person(name,email){
-    this.name = name;
-    this.email = email
-}
-Person.prototype.greet = function(){
-    console.log("Hello!"+this.name);
-}
-var result = new Person("Faiz")
-result.greet()
+// function Person(name,email){
+//     this.name = name;
+//     this.email = email
+// }
+// Person.prototype.greet = function(){
+//     console.log("Hello!"+this.name ,this.email);
+// }
+// var result = new Person("Faiz","faiz@fsg")
+// result.greet()
+
+// function person (name,email,id){
+//     this.name = name;
+//     this.email = email;
+//     this.id  = id
+// }
+// // person.prototype.greeting =function(){
+// //     this.greeting= this.greeting
+// // }
+// person.prototype.greet = "HelloProto"
+// person.prototype.greeting = "Nice to see!"
+// var person1 = new person("Faiz","google@gmail.com",1232435)
+// var person2 = new person("umair","umair@gmail.com",1232435)
+// var person3 = new person("Habib","habib@gmail.com",1232435)
+
+
+
+
+// console.log(person1);
+// console.log(person2);
+// console.log(person3);
+
+
+// 1. Suppose You have an array of object
+// var itemsArray = [
+// {name:”juice”,price:”50”, quantity:”3”},
+// {name:”cookie”,price:”30”, quantity:”9”},
+// {name:”shirt”,price:”880”, quantity:”1”},
+// {name:”pen”,price:”100”, quantity:”2”}];
+// Calculate total price of each item and all items;
+
+
+
+
+
+// var itemsArray = [
+// {name : "juice",price :"50",quantity : "3"},
+// {name : "cookie",price :"30",quantity : "9"},
+// {name : "shirt",price :"880",quantity : "1"},
+// {name : "pen",price :"100",quantity : "2"},
+// ]
+//  itemsArray.calculate= function(){
+//    var juiceP =  this.price =price
+//     var price = this.quantity =quantity
+// return juiceP * quantity
+// }
+// console.log(itemsArray.calculate());
+
+
+// Define the array of objects
+var itemsArray = [
+        { name: "juice", price: "50", quantity: "3" },
+        { name: "cookie", price: "30", quantity: "9" },
+        { name: "shirt", price: "880", quantity: "1" },
+        { name: "pen", price: "100", quantity: "2" }
+      ];
+      
+      // Initialize a variable to keep track of the total price of all items
+//       var totalPriceItem = 0;
+
+//       for(var i = 0; i<itemsArray.length; i++){
+//         var item = itemsArray[i]
+//         var totalPriceOftwo = parseInt(item.price) * parseInt(item.quantity)
+//         // console.log(totalPriceOftwo);
+//         console.log("total is of " + item.name + " is "+ totalPriceOftwo);
+//               totalPriceItem +=totalPriceOftwo
+
+//       }
+// console.log(`Total price of all products: ${totalPriceItem}`); 
+
+
+
+// var itemsArray = [
+//   { name: "juice", price: "50", quantity: "3" },
+//   { name: "cookie", price: "30", quantity: "9" },
+//   { name: "shirt", price: "880", quantity: "1" },
+//   { name: "pen", price: "100", quantity: "2" }
+// ];
+
+// var totalpricAll = 0;
+// for (var i = 0 ; i <itemsArray.length; i++){
+//    var item = itemsArray[i]
+//   //  console.log(item);
+//   var calculation = item.price * item.quantity;
+//   console.log(`total price of ${item.name} is ${calculation}`);
+//   totalpricAll +=calculation
+// }
+// console.log("total=>",totalpricAll);
+
+
+
+
+
+
+
+
+
+
