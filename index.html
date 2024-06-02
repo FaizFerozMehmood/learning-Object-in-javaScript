@@ -4,8 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        document.getElementById('remove-button').addEventListener('click', function() {
+            var targetElement = document.getElementById('target-element');
+            var button = document.getElementById('remove-button');
+
+            // Remove the target element
+            if (targetElement) {
+                targetElement.parentNode.removeChild(targetElement);
+            }
+
+            // Remove the button itself
+            if (button) {
+                button.parentNode.removeChild(button);
+            }
+        });
+    </script>
 </head>
 <body>
+
+    <div id="target-element">This is the target element</div>
+    <button id="remove-button">Remove Element and Button</button>
       <script src="app.js"></script>
 </body>
 </html>
